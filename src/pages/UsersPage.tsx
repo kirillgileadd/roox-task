@@ -9,7 +9,7 @@ const UsersPage: FC = () => {
     const {fetchUsers} = useActions()
 
     useEffect(() => {
-        fetchUsers()
+        fetchUsers(null)
     }, [])
 
     return !loading ?
