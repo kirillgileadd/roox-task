@@ -4,6 +4,12 @@ export interface IAdders {
     zipcode: string;
 }
 
+export interface ICompany {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+}
+
 export interface IUser {
     id: number;
     name: string;
@@ -11,4 +17,5 @@ export interface IUser {
     address: IAdders;
     phone: string;
     website: string;
+    company: ICompany
 }
