@@ -6,13 +6,16 @@ import Loader from "../components/Loader";
 
 const UsersPage: FC = () => {
     const {users, error, loading} = useTypeSelector(state => state.user)
-    const {fetchUsers} = useActions()
+    const {fetchUsers, clearUsers} = useActions()
 
     useEffect(() => {
-        fetchUsers(null)
+        fetchUsers()
+        return () => {
+            clearUsers()
+        }
     }, [])
 
-    return !loading ?
+    return !loading && users.length ?
         <div>
             <UsersList users={users}/>
         </div>

@@ -1,4 +1,4 @@
-import {UserProfileAction, UserProfileState, UserProfileActionTypes} from "../../types/userProfile";
+import {UserProfileAction, UserProfileActionTypes, UserProfileState} from "../../types/userProfile";
 
 const initialState: UserProfileState = {
     user: null,
@@ -25,6 +25,12 @@ export const userProfileReducer = (state =initialState, action: UserProfileActio
             return {
                 ...state,
                 error: action.payload,
+            }
+        }
+        case UserProfileActionTypes.CLEAR_USER_PROFILE: {
+            return {
+                ...state,
+                user: null
             }
         }
         default: {

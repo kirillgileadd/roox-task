@@ -1,13 +1,14 @@
 import {IUser} from "./index";
 
 export interface UserProfileState {
-    user: IUser | null;
+    user: null | IUser;
     loading: boolean;
     error: null | string;
 }
 
 export enum UserProfileActionTypes {
     FETCH_USER_PROFILE = "FETCH_USER_PROFILE",
+    CLEAR_USER_PROFILE = "CLEAR_USER_PROFILE",
     FETCH_USER_PROFILE_SUCCESS = "FETCH_USER_PROFILE_SUCCESS",
     FETCH_USER_PROFILE_ERROR = "FETCH_USER_PROFILE_ERROR"
 }
@@ -20,7 +21,6 @@ interface FetchUserProfileAction {
 interface FetchUserProfileSuccessAction {
     type: UserProfileActionTypes.FETCH_USER_PROFILE_SUCCESS;
     payload: IUser
-
 }
 
 interface FetchUserProfileErrorAction {
@@ -28,4 +28,8 @@ interface FetchUserProfileErrorAction {
     payload: string
 }
 
-export type UserProfileAction = FetchUserProfileAction | FetchUserProfileSuccessAction | FetchUserProfileErrorAction
+interface ClearUserProfile {
+    type: UserProfileActionTypes.CLEAR_USER_PROFILE
+}
+
+export type UserProfileAction = FetchUserProfileAction | FetchUserProfileSuccessAction | FetchUserProfileErrorAction | ClearUserProfile

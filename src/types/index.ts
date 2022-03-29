@@ -13,6 +13,7 @@ export interface ICompany {
 export interface IUser {
     id: number;
     name: string;
+    username: string;
     email: string;
     address: IAdders;
     phone: string;
