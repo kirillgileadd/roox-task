@@ -1,5 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 import {useActions} from "../hooks/useAction";
+import Button from "./Button/Button";
 
 const NavBar:FC = () => {
     const [sort, setSort] = useState<string>('')
@@ -16,8 +17,8 @@ const NavBar:FC = () => {
     return (
         <div>
             Navbar
-            <button onClick={sortHandler} value={'address.city'}>По городу</button>
-            <button onClick={sortHandler} value={'company.name'}>По комании</button>
+            <Button onClick={sortHandler} value={'address.city'}>По городу</Button>
+            <Button onClick={sortHandler} value={'company.name'}>По комании</Button>
         </div>
     );
 };

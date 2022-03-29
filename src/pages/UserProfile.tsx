@@ -4,6 +4,7 @@ import {useActions} from "../hooks/useAction";
 import UserItemForm from "../components/UserItemForm";
 import {useTypeSelector} from "../hooks/useTypeSelector";
 import Loader from "../components/Loader";
+import Button from "../components/Button/Button";
 
 const UserProfile: FC = () => {
     let {id} = useParams()
@@ -24,7 +25,7 @@ const UserProfile: FC = () => {
                 <h1>
                     Профиль пользователя
                 </h1>
-                <button onClick={() => setDisabled(prev => !prev)}>Редактировать</button>
+                <Button onClick={() => setDisabled(prev => !prev)}>Редактировать</Button>
             </div>
             <div>
                 {
