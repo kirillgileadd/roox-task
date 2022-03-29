@@ -12,6 +12,7 @@ const UserList: FC<UserListProps> = ({users}) => {
             {
                 users.map((user) =>
                     <UserItem
+                        key={user.id}
                         id={user.id}
                         city={user.address.city}
                         name={user.name}

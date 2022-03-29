@@ -18,5 +18,6 @@ export interface IUser {
     address: IAdders;
     phone: string;
     website: string;
-    company: ICompany
+    company: ICompany,
+    comment?: string
 }
