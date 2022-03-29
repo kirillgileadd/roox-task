@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 
-const User:FC = () => {
+const Loader:FC = () => {
     return (
         <div>
-            User
+            Loading
         </div>
     );
 };
 
-export default User;
+export default Loader;

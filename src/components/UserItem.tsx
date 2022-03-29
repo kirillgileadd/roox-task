@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-const UserList:FC = () => {
+const UserItem:FC = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const UserList:FC = () => {
     );
 };
 
-export default UserList;
+export default UserItem;
