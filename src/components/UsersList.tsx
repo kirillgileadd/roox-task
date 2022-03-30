@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {IUser} from "../types";
-import UserItem from "./UserItem";
+import UserItem from "./UserItem/UserItem";
 
 interface UserListProps {
     users: IUser[];
