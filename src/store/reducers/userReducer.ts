@@ -1,6 +1,6 @@
 import {UserAction, UserActionTypes, UserState} from "../../types/user";
 import {UserProfileActionTypes} from "../../types/userProfile";
-import UserProfile from "../../pages/UserProfile";
+import UserProfile from "../../pages/UserProfile/UserProfile";
 
 const initialState: UserState = {
     users: [],

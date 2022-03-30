@@ -1,10 +1,11 @@
 import React, {FC, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import {useActions} from "../hooks/useAction";
-import UserItemForm from "../components/UserItemForm";
-import {useTypeSelector} from "../hooks/useTypeSelector";
-import Loader from "../components/Loader";
-import Button from "../components/Button/Button";
+import {useActions} from "../../hooks/useAction";
+import UserItemForm from "../../components/UserItemForm/UserItemForm";
+import {useTypeSelector} from "../../hooks/useTypeSelector";
+import Loader from "../../components/Loader";
+import Button from "../../components/Button/Button";
+import style from './UserProfile.module.scss'
 
 const UserProfile: FC = () => {
     let {id} = useParams()
@@ -20,14 +21,14 @@ const UserProfile: FC = () => {
     }, [])
 
     return (
-        <div>
-            <div>
-                <h1>
+        <div className={style.main}>
+            <div className={style.header}>
+                <h1 className={style.title}>
                     Профиль пользователя
                 </h1>
                 <Button onClick={() => setDisabled(prev => !prev)}>Редактировать</Button>
             </div>
-            <div>
+            <div className={style.content}>
                 {
                     !loading && user ? <UserItemForm user={user} disabled={disabled}/> : <Loader/>
                 }

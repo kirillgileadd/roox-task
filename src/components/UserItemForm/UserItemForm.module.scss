@@ -1,0 +1,24 @@
+.input__box {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 9px;
+  margin-bottom: 3px;
+}
+
+.input {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #D8D8D8;
+  background-color: #ffff;
+  &:disabled {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}

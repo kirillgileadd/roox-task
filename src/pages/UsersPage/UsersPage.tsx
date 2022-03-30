@@ -16,16 +16,16 @@ const UsersPage: FC = () => {
         }
     }, [])
 
-    return !loading && users.length ?
+    return (
         <div className={style.main}>
             <h3 className={style.title}>
                 Список пользователей
             </h3>
-            <UsersList users={users}/>
+            {
+                !loading && users.length ? <UsersList users={users}/> : <Loader/>
+            }
         </div>
-        :
-        <Loader/>
-
+    );
 };
 
 export default UsersPage;

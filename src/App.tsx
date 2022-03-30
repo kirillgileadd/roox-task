@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import UsersPage from "./pages/UsersPage/UsersPage";
-import UserProfile from "./pages/UserProfile";
+import UserProfile from "./pages/UserProfile/UserProfile";
 import NavBar from "./components/NavBar";
 import style from './App.module.scss'
 
