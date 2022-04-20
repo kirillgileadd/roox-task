@@ -1,5 +1,8 @@
 .main {
   padding: 30px;
+  @media (max-width: 657px) {
+    padding: 10px;
+  }
 }
 
 .title {
@@ -7,4 +10,8 @@
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 17px;
+}
+
+.users_quantity {
+  text-align: right;
 }

@@ -6,6 +6,9 @@
 .content {
   width: 100%;
   margin-left: 150px;
+  @media (max-width: 657px) {
+    margin-left: 100px;
+  }
 }
 
 .navbar {
@@ -16,6 +19,10 @@
   height: 100%;
   padding: 35px 20px;
   background-color: #BDBDBD;
+  @media (max-width: 657px) {
+    width: 100px;
+    padding: 10px;
+  }
 }
 
 .navbar__title {

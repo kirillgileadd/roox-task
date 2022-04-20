@@ -10,7 +10,7 @@ interface UserItemFormProps {
 }
 
 const UserItemForm: FC<UserItemFormProps> = ({disabled, user}) => {
-    const {register, handleSubmit, watch, formState: {errors}} = useForm<IUser>({
+    const {register, handleSubmit, formState: {errors}} = useForm<IUser>({
         defaultValues: {
             name: user.name,
             username: user.username,
@@ -26,7 +26,6 @@ const UserItemForm: FC<UserItemFormProps> = ({disabled, user}) => {
         }
     });
     const onSubmit: SubmitHandler<IUser> = data => console.log(data);
-    console.log(errors);
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
